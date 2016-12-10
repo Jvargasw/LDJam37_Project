@@ -12,9 +12,13 @@ public class Camera_Gravity : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-        if (Input.GetKeyDown("q"))
+        if (Input.GetKeyDown("a") || Input.GetKeyDown("left"))
         {
-            transform.Rotate(0,0, 90);
+            transform.Rotate(0,0, -90);
+        }
+        if (Input.GetKeyDown("d") || Input.GetKeyDown("right"))
+        {
+            transform.Rotate(0, 0, 90);
         }
 
 
