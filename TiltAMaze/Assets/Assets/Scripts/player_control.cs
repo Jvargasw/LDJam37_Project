@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class player_control : MonoBehaviour
 {
@@ -21,4 +22,16 @@ public class player_control : MonoBehaviour
     {
 		
 	}
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "Hazards")
+        {
+            //other.gameObject.SetActive(false);
+            //restart from a checkpoint if one has been reached
+
+            //else restart the level
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+    }
 }
