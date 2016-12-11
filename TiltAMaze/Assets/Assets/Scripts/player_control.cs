@@ -7,9 +7,11 @@ public class player_control : MonoBehaviour
 {
     public Sprite player_idle;
     private SpriteRenderer sRenderer;
+    private Vector3 lastCheckpoint;
 	// Use this for initialization
 	void Start ()
     {
+        lastCheckpoint = transform.position;
         sRenderer = GetComponent<SpriteRenderer>();
         if (sRenderer.sprite == null)
         {
@@ -29,9 +31,16 @@ public class player_control : MonoBehaviour
         {
             //other.gameObject.SetActive(false);
             //restart from a checkpoint if one has been reached
+            //else, back to start
+            transform.position = lastCheckpoint;
 
-            //else restart the level
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+
+        else if (other.gameObject.tag == "Checkpoint")
+        {
+            lastCheckpoint = other.gameObject.transform.position;
+            other.gameObject.SetActive(false);
         }
     }
 }
