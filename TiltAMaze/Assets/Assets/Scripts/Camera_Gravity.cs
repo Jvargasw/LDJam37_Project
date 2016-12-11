@@ -9,16 +9,24 @@ public class Camera_Gravity : MonoBehaviour {
 		
 	}
 	
-	// Update is called once per frame
+	
 	void Update ()
     {
-        if (Input.GetKeyDown("a") || Input.GetKeyDown("left"))
+        
+        //smooth rotation
+        if (Input.GetKey("a") || Input.GetKey("left"))
         {
-            transform.Rotate(0,0, -90);
+            
+            transform.Rotate(Vector3.back, 50f * Time.deltaTime);
         }
-        if (Input.GetKeyDown("d") || Input.GetKeyDown("right"))
+        else if (Input.GetKey("d") || Input.GetKey("right"))
         {
-            transform.Rotate(0, 0, 90);
+            transform.Rotate(Vector3.forward, 80f * Time.deltaTime);
+        }
+        //rotation jumping
+        if (Input.GetKeyDown("space"))
+        {
+            transform.Rotate(0, 0, 180);
         }
 
 
