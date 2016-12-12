@@ -52,6 +52,10 @@ public class player_control : MonoBehaviour
                 other.gameObject.GetComponent<checkpoint_Control>().isActivated = true;
             }
         }
+        else if (other.gameObject.tag == "Finish")
+        {
+            SceneManager.LoadScene("Game_Won");
+        }
     }
 
     void respawnPlayer()
