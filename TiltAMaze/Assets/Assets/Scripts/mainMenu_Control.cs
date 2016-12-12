@@ -3,14 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class mainMenu_Control : MonoBehaviour {
+public class mainMenu_Control : MonoBehaviour
+{
 
-	// Use this for initialization
-	void Start ()
-    {
-		
-	}
-	
     //play button
     public void PlayPress()
     {
