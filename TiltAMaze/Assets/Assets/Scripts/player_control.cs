@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class player_control : MonoBehaviour
 {
+    public AudioClip Checkpoint;
     public Sprite player_idle;
     private SpriteRenderer sRenderer;
     private Vector3 lastCheckpoint;
@@ -48,6 +49,8 @@ public class player_control : MonoBehaviour
             if (other.gameObject.GetComponent<checkpoint_Control>().isActivated == false)
             {
                 lastCheckpoint = other.gameObject.transform.position;
+                //play sound effect
+                AudioSource.PlayClipAtPoint(Checkpoint, transform.position);
                 //set the checkpoint to the "activated" state
                 other.gameObject.GetComponent<checkpoint_Control>().isActivated = true;
             }
