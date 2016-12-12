@@ -17,11 +17,11 @@ public class Camera_Gravity : MonoBehaviour {
         if (Input.GetKey("a") || Input.GetKey("left"))
         {
             
-            transform.Rotate(Vector3.back, 50f * Time.deltaTime);
+            transform.Rotate(Vector3.back, 100f * Time.deltaTime);
         }
         else if (Input.GetKey("d") || Input.GetKey("right"))
         {
-            transform.Rotate(Vector3.forward, 80f * Time.deltaTime);
+            transform.Rotate(Vector3.forward, 100f * Time.deltaTime);
         }
         //rotation jumping
         if (Input.GetKeyDown("space"))
