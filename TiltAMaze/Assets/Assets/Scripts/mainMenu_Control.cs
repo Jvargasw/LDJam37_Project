@@ -12,6 +12,11 @@ public class mainMenu_Control : MonoBehaviour
         SceneManager.LoadScene("Level1");
     }
 
+    public void HTPPress()
+    {
+        SceneManager.LoadScene("How_To_Play");
+    }
+
     public void ExitPress()
     {
         Application.Quit();
