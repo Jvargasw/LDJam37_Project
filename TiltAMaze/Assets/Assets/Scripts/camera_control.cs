@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class camera_control : MonoBehaviour {
-
+public class camera_control : MonoBehaviour
+{
     private Transform player;
 	// Use this for initialization
 	void Start ()

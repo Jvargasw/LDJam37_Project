@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class checkpoint_Control : MonoBehaviour {
+public class checkpoint_Control : MonoBehaviour
+{
     private SpriteRenderer sRenderer;
     public bool isActivated;
     public Sprite activeCheck;

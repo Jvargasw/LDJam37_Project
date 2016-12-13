@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class endMenu_Control : MonoBehaviour {
+public class endMenu_Control : MonoBehaviour
+{
 
 	// Use this for initialization
 	void Start ()

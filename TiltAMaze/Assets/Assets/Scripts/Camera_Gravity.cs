@@ -2,14 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Camera_Gravity : MonoBehaviour {
+public class Camera_Gravity : MonoBehaviour
+{
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	
 	void Update ()
     {
         
